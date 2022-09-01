@@ -62,12 +62,12 @@ const phoneDetails = id => {
 const displayDetails = (phone) => {
     console.log(phone)
     const divDisplay = document.getElementById('modal-id');
-    divDisplay.innerText = phone.brand;
+    divDisplay.innerText = `Brand : ${phone.brand}`
 
     const phoneDetails = document.getElementById('phone-detail')
     phoneDetails.innerHTML = `
          <h6>${phone.name}</h6>
-         <p>${phone.releaseDate ? phone.releaseDate : 'N/A'}</p>
+         <p>Release date :${phone.releaseDate ? phone.releaseDate : 'N/A'}</p>
          <p>Bluetooth : ${phone.others.Bluetooth ? phone.others.Bluetooth : 'N/A'}</p>
          <p>Memory : ${phone.mainFeatures.memory ? phone.mainFeatures.memory : 'N/A'}</p>
      `;
